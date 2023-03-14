@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import helper.DriverManager;
+
 public class WelcomePage {
 	
 	@FindBy(how = How.XPATH, using = "//div[@id='welcome']/h1")
@@ -13,6 +15,7 @@ public class WelcomePage {
 	public String getWelcomeMessage() {
 		System.out.println("Getting the welcome message");
 		return txtWelcome.getText();
+		
 	}
 	
 
