@@ -1,9 +1,13 @@
 package pageobjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helper.DriverManager;
 
@@ -24,6 +28,9 @@ public class AdminPage {
 	
 	
 	public void clickResetUsers() {
+		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(3));
+		wait.until(ExpectedConditions.visibilityOf(btnResetUsers));
+		
 		System.out.println("Clickin on the reset users button");
 		btnResetUsers.click();
 

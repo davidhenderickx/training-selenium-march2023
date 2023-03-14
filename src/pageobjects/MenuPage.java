@@ -13,6 +13,9 @@ public class MenuPage {
 	@FindBy(how = How.LINK_TEXT, using = "Admin")
 	private WebElement btnAdmin;
 	
+	@FindBy(how = How.LINK_TEXT, using = "Blabla")
+	private WebElement btnNotExists;
+	
 	
 	public void logout() {
 		System.out.println("Clicking on the logout button");
@@ -24,4 +27,8 @@ public class MenuPage {
 		btnAdmin.click();
 	}
 
+	
+	public void clickButtonNotExists() {
+		btnNotExists.click();
+	}
 }

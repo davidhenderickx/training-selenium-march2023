@@ -1,6 +1,9 @@
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helper.DriverManager;
 import pageobjects.AdminPage;
@@ -12,6 +15,7 @@ public class ExercisesEight {
 
 	public static void main(String[] args) {
 		
+		DriverManager.setFirefoxDriver();
 		DriverManager.getDriver().get("https://satrngselcypr.z16.web.core.windows.net/");
 			
 		MenuPage menu = new MenuPage();
@@ -40,7 +44,11 @@ public class ExercisesEight {
 				break;
 			}
 		}
+	
+		
 		DriverManager.getDriver().switchTo().window(newWindow);
+		
+		
 		
 		//Resetting the users
 		admin.clickResetUsers();
