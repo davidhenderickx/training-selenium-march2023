@@ -18,5 +18,9 @@ public class WelcomePage {
 		
 	}
 	
+	public Boolean isWelcomeMessageDisplayed() {
+		return txtWelcome.isDisplayed();
+	}
+	
 
 }
